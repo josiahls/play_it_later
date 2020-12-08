@@ -1,0 +1,4 @@
+Hello
+This is
+A file that 
+needs to be encrypted

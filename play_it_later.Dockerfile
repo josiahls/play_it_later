@@ -56,7 +56,7 @@ RUN /bin/bash -c "source activate play_it_later && jt -t grade3 -cellw=90% -fs=2
 #COPY --chown=$CONTAINER_USER:$CONTAINER_GROUP entrypoint.sh /usr/local/bin/
 COPY --chown=$CONTAINER_USER:$CONTAINER_GROUP entrypoint.sh entrypoint.sh
 #RUN chmod +x /usr/local/bin/entrypoint.sh
-RUN chmod +x entrypoint.sh
+RUN ["chmod", "+x", "entrypoint.sh"]
 RUN mkdir /home/play_it_later/.gem && \
         chown $CONTAINER_USER -R /home/$CONTAINER_USER/.gem && \
         chown $CONTAINER_USER -R /opt/project
@@ -65,8 +65,6 @@ RUN mkdir /home/play_it_later/.gem && \
 
 #RUN chown -R $CONTAINER_USER /opt/conda/envs/play_it_later && chmod -R 777 /opt/conda/envs/play_it_later
 
-RUN apt-get install -y python-opengl
-RUN apt-get install -y xvfb
 USER $CONTAINER_USER
 RUN conda init bash
 COPY --chown=$CONTAINER_USER:$CONTAINER_GROUP . .
@@ -74,7 +72,7 @@ COPY --chown=$CONTAINER_USER:$CONTAINER_GROUP themes.jupyterlab-settings /home/p
 COPY --chown=$CONTAINER_USER:$CONTAINER_GROUP shortcuts.jupyterlab-settings /home/play_it_later/.jupyter/lab/user-settings/@jupyterlab/shortcuts-extension/
 
 # Install the deploy package for system access
-ENTRYPOINT "entrypoint.sh"
+ENTRYPOINT ["./entrypoint.sh"]
 RUN echo 'source activate play_it_later' >> ~/.bashrc
 CMD ["/bin/bash","-c"]
-RUN /bin/bash -c "source activate play_it_later && pip install ptan --no-dependencies && python setup.py develop"
+RUN /bin/bash -c "source activate play_it_later && python setup.py develop"
