@@ -1,0 +1,28 @@
+name: play_it_later
+channels:
+  - conda-forge
+  - fastai
+dependencies:
+  - python=3.7
+  - pip
+  - fastprogress
+  - jupyter
+  - notebook
+  - setuptools
+  - pip:
+      - pytest
+      - dataclasses
+#      - numpy==1.17.4
+      - pandas
+      - pyyaml
+      - requests
+      - cython
+      - easydict
+      - matplotlib
+      - jupyter_console
+      - pygifsicle
+      - jupyterlab
+      - nbdev
+      - jupyter
+      - jupyterthemes
+      - fastcore
