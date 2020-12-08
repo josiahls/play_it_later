@@ -20,8 +20,6 @@ exclude:
   - .idea/
   - .gitignore
   - vendor
- 
-exclude: [vendor]
 
 highlighter: rouge
 markdown: kramdown
