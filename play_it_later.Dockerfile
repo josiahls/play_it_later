@@ -1,6 +1,9 @@
 FROM continuumio/miniconda:4.7.12
 
-RUN apt-get update -y && apt-get install -y nano make curl jq
+RUN apt-get update -y && apt-get install -y nano make curl jq xclip
+
+RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+RUN apt install -y ./google-chrome-stable_current_amd64.deb
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV CONTAINER_USER play_it_later
@@ -70,7 +73,7 @@ RUN conda init bash
 COPY --chown=$CONTAINER_USER:$CONTAINER_GROUP . .
 COPY --chown=$CONTAINER_USER:$CONTAINER_GROUP themes.jupyterlab-settings /home/play_it_later/.jupyter/lab/user-settings/@jupyterlab/apputils-extension/
 COPY --chown=$CONTAINER_USER:$CONTAINER_GROUP shortcuts.jupyterlab-settings /home/play_it_later/.jupyter/lab/user-settings/@jupyterlab/shortcuts-extension/
-
+#
 # Install the deploy package for system access
 ENTRYPOINT ["./entrypoint.sh"]
 RUN echo 'source activate play_it_later' >> ~/.bashrc

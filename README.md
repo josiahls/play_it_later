@@ -4,6 +4,8 @@
 
 ## Install
 
+If you are using linux, and run into a `PyperclipException` you may need do `sudo apt-get install xclip`
+
 ## Conda
 
 `conda env create -f environment.yaml`
@@ -15,7 +17,9 @@
 For cpu execution
 ```bash
 docker build -f play_it_later.Dockerfile -t play_it_later:latest .
-docker run --rm -it -p 8888:8888 -p 4000:4000 --user "$(id -u):$(id -g)" -v $(pwd):/opt/project/play_it_later play_it_later:latest /bin/bash
+docker run --rm -it -p 8888:8888 -p 4000:4000 --user "$(id -u):$(id -g)" \
+             -v $(pwd):/opt/project/play_it_later play_it_later:latest \
+             -v /etc/localtime:/etc/localtime /bin/bash
 ```
 
 ## Contributing

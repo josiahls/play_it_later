@@ -5,24 +5,23 @@ channels:
 dependencies:
   - python=3.7
   - pip
-  - fastprogress
   - jupyter
   - notebook
   - setuptools
   - pip:
-      - pytest
-      - dataclasses
-#      - numpy==1.17.4
-      - pandas
-      - pyyaml
       - cryptography
       - beautifulsoup4
+      - flask
+      - colorama
+      - selenium
+      - click
+      - pyperclip
       - requests
       - cython
       - easydict
       - matplotlib
       - jupyter_console
-      - pygifsicle
+      - webdriver-manager
       - jupyterlab
       - nbdev
       - jupyter

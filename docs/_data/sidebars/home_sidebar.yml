@@ -12,6 +12,9 @@ entries:
     - output: web,pdf
       title: Encryption
       url: encryption.html
+    - output: web,pdf
+      title: Talker
+      url: talker.html
     output: web
     title: play_it_later
   output: web

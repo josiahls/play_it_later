@@ -37,6 +37,7 @@ nb_path: "nbs/index.ipynb"
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>If you are using linux, and run into a <code>PyperclipException</code> you may need do <code>sudo apt-get install xclip</code></p>
 <h2 id="Conda">Conda<a class="anchor-link" href="#Conda"> </a></h2><p><code>conda env create -f environment.yaml</code></p>
 <p><code>source activate play_it_later &amp;&amp; python setup.py develop</code></p>
 
@@ -47,7 +48,9 @@ nb_path: "nbs/index.ipynb"
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Docker-(highly-recommend)">Docker (highly recommend)<a class="anchor-link" href="#Docker-(highly-recommend)"> </a></h2><p>For cpu execution</p>
 <div class="highlight"><pre><span></span>docker build -f play_it_later.Dockerfile -t play_it_later:latest .
-docker run --rm -it -p <span class="m">8888</span>:8888 -p <span class="m">4000</span>:4000 --user <span class="s2">&quot;</span><span class="k">$(</span>id -u<span class="k">)</span><span class="s2">:</span><span class="k">$(</span>id -g<span class="k">)</span><span class="s2">&quot;</span> -v <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/opt/project/play_it_later play_it_later:latest /bin/bash
+docker run --rm -it -p <span class="m">8888</span>:8888 -p <span class="m">4000</span>:4000 --user <span class="s2">&quot;</span><span class="k">$(</span>id -u<span class="k">)</span><span class="s2">:</span><span class="k">$(</span>id -g<span class="k">)</span><span class="s2">&quot;</span> <span class="se">\</span>
+             -v <span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>:/opt/project/play_it_later play_it_later:latest <span class="se">\</span>
+             -v /etc/localtime:/etc/localtime /bin/bash
 </pre></div>
 
 </div>
