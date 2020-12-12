@@ -4,7 +4,6 @@ __all__ = ['encrypt_game', 'decrypt_game']
 
 # Cell
 from fastcore.all import *
-from bs4 import BeautifulSoup
 from pathlib import Path
 from functools import partial
 from shutil import copyfile
@@ -12,9 +11,7 @@ from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.remote.webdriver import WebDriver as RemoteWebDriver
 from selenium.webdriver.support import expected_conditions as EC
-
 from selenium.webdriver.common.by import By
-
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.chrome.options import Options
 from cryptography.fernet import Fernet
@@ -24,10 +21,8 @@ from time import sleep
 import http
 import webbrowser
 import shutil
-import flask
 import os
 import click
-import pyperclip
 import colorama
 import pickle
 import json

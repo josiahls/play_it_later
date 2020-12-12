@@ -2,6 +2,7 @@
   "play_it_later": {
     "Overview": "/",
     "Encryption": "encryption.html",
-    "Talker": "talker.html"
+    "Talker": "talker.html",
+    "Title": "cli.html"
   }
 }

@@ -48,7 +48,7 @@ def decrypt_file(p:Path,key,to_p:Path=None,block_sz=65536,verbose=False,prefix='
                 invalid_exts=''):
     p=Path(p)
     pv(p,verbose)
-    to_p=ifnone(to_p,p.parents[2]/prefix/p if len(p.parts)>2 else prefix/p)
+    to_p=ifnone(to_p,prefix/p)
     decryptor=Fernet(key)
     os.makedirs(str(Path(to_p).parent),exist_ok=True)
     if p.suffix[1:] in invalid_exts.split(','):
