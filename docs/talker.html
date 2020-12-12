@@ -46,7 +46,7 @@ nb_path: "nbs/01_talker.ipynb"
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">encrypted_text</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;202012090430-4ID_02OeiqruSuDOrKn2GvNsySCGPh5PnWHlur9wuxSvsovbbiUqvctKx3nb-s6</span>
 <span class="s2">eGhF1exvfaxxLj7lOc9qR2qC8pQIXZz66KYjNc4tDDNF75pcnw2mpM294fJdJjr2mB2TBQI4M6WO</span>
 <span class="s2">SF_WqKEUORmjwWABGiq0gOYb2FAdYQ_Hxy7GvN0QLswzZxu-JfjBECHfCo_8evHyDMaSdS-1KhnL</span>
-<span class="s2">s7weLw===lYiH&quot;&quot;&quot;</span>
+<span class="s2">s7weLw===lYiH&quot;&quot;&quot;</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
 
 <span class="n">previous_date_key</span><span class="o">=</span><span class="s2">&quot;202012111930-4IEAJb8-vbHxgEHAojlb2xMAyJQYYmE29nb3dcCxxhEekj6f3dY_IVopegcSi-YmurGW2u9oNQk5e0TnIdZ0UWG0jX2tA7IFIq14tckSaZvoiasCxuIcfjonPUnOsJMIYmrYVQaxlvGDEOgPuIPmOPKKcxSoS7OXWm83qbw5C1ClwR0EFKqgkdqd1Q9OQsyUnDa-agpJIC5nwaKF2Q0YeqULnnnBU66rDoGLjZmzpKiOZUlq5-rb_jdjKRdm8Nnu6GiInUu0mXZP_eG-Ik8Jn-Xpb-2K4cKKwYWo1rH01m8vPhrCCUp84n6pU0ysIMTnsm2HizhRkcp3YXmXjPjeIGR6ONSw62J_0GxVKKkv86_KXPmgli-B77o2a418SHkxxT78J-3CKJPDS0KBTXVAiloW2cNwoUcJGQSgtDKIrektyd82g_NljPrxGIXOSwg4BsdKKZWs7pAc9k-l7zWzQubtIjd8bflFojqOTN60lrv_ZCBofUw2aas7WY1UYzfbkzwpN0ki83cG8vRI0YvDrWPqd15Zw===p_LL&quot;</span>
 </pre></div>
@@ -234,7 +234,7 @@ nb_path: "nbs/01_talker.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h2 id="HttpConnectionFailure" class="doc_header"><code>class</code> <code>HttpConnectionFailure</code><a href="https://github.com/josiahls/play_it_later/tree/master/play_it_later/talker.py#L49" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>HttpConnectionFailure</code>() :: <code>Exception</code></p>
+<h2 id="HttpConnectionFailure" class="doc_header"><code>class</code> <code>HttpConnectionFailure</code><a href="https://github.com/josiahls/play_it_later/tree/master/play_it_later/talker.py#L50" class="source_link" style="float:right">[source]</a></h2><blockquote><p><code>HttpConnectionFailure</code>() :: <code>Exception</code></p>
 </blockquote>
 <p>Common base class for all non-exit exceptions.</p>
 
@@ -259,7 +259,7 @@ nb_path: "nbs/01_talker.ipynb"
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="send_encryption_key" class="doc_header"><code>send_encryption_key</code><a href="https://github.com/josiahls/play_it_later/tree/master/play_it_later/talker.py#L51" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>send_encryption_key</code>(<strong><code>key</code></strong>, <strong><code>year</code></strong>=<em><code>2020</code></em>, <strong><code>month</code></strong>=<em><code>12</code></em>, <strong><code>day</code></strong>=<em><code>10</code></em>, <strong><code>hour</code></strong>=<em><code>19</code></em>, <strong><code>minute</code></strong>=<em><code>30</code></em>, <strong><code>max_tries</code></strong>=<em><code>10</code></em>)</p>
+<h4 id="send_encryption_key" class="doc_header"><code>send_encryption_key</code><a href="https://github.com/josiahls/play_it_later/tree/master/play_it_later/talker.py#L52" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>send_encryption_key</code>(<strong><code>key</code></strong>, <strong><code>year</code></strong>=<em><code>2020</code></em>, <strong><code>month</code></strong>=<em><code>12</code></em>, <strong><code>day</code></strong>=<em><code>10</code></em>, <strong><code>hour</code></strong>=<em><code>19</code></em>, <strong><code>minute</code></strong>=<em><code>30</code></em>, <strong><code>max_tries</code></strong>=<em><code>10</code></em>)</p>
 </blockquote>
 
 </div>
@@ -320,7 +320,7 @@ Please pick from these days in month 12: (11, 12, 13, 14, 15, 16, 17, 18, 19, 20
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>&#39;202012111930-4IEAJyH44BRycQO4aoQNXc2gM9pu1va-UtTSDNIdfVZOBe167yKY89Ai0cwsUmmJM3Y7BRa-z9Phdw-ia_AXM-PuBGJ-HJk7wLWWkTQuy8AiXdQulrjZnbBHJzECJ1N83kay-FPCjqxeL0JU0M2I3HiHhMYf7r22MNNh6269_gck5SvE-0-7RpksOJ0_30ZAcwUgnSI5LiPjd5lax2hpVl0ThJMt4d2EFCkAkG_rVDFVMZmIglJV95ZB6G7vxelVmdCjg1LD4lrn-DQuIIWVTITsU626uJ0HmYSHIkDaQ14X6z55TbvGTe9pqXL52w7fM8wVQKfQjYCQ2tUqSDluXkqyJOTq2dsT24txA49-9IvjEHUTSHe-U-hi7cxf3qADWgnfcwBYHjysn5DCmDAkLdaC2WeV7qGujKfhVRKkjsobqKozBnwSblqhbsdBpLus7WIcusLXR8-vk_xdGnJ4BeRQipJHM0AubeVB6SVKXvgVoskYPHamGixaJX7b3H4ifqVLdSGWS00RCe1_SEpPvz4I8SREA===1SJi&#39;</pre>
+<pre>&#39;202012111930-4ID_3GJH4JOXgupcMihN6UCCLafJ6ektWs8oc_BQwFY7xH3uV8R-Yt6eepFS6UoHA3HKhBzpp3yYrAM_PxSovZLzeCak6Rv9pEU5JAMj94PbOi_PlPLTMWvHnWTa2pbiUICnKi3Y7J3o1nmEXgiyUacf09QWC5djCROJAbnRMgXvWzVNW6zFvBbG_uTHCO3IDfzUbnsZuCSQP2Q76PcMyyJgROTLyHrdwpjQsy22tiGwVzfVi95PR80UeDq9-ZMCtbRVUrhivhIcBd9Iu5Epk35RTGO9ucWJMx9LXF2gG2-xzE22oYegO4TTrFWB4dqPM_T4gfnjk5BLxVNLBlIDn5Roua-UudPg8WUUSIzUHAd4gNX6lLkQXq2zyRpBg5K6w1jvNBuPuOM9hQLhA5_jy_L6cTknASYUiO4mFbr-rJ9h53nushOSr7XJoVc22pDtu0XU4SS89s9y3laTRifFjXIIAeVAHuYf-v-8K3R5_doMEgxuG1E--Fcci9LzBvWHpGpmW5dBh2Dvn_7eqnDrssIYuOpKA===WXIj&#39;</pre>
 </div>
 
 </div>
@@ -365,7 +365,7 @@ Please pick from these days in month 12: (11, 12, 13, 14, 15, 16, 17, 18, 19, 20
 
 
 <div class="output_markdown rendered_html output_subarea ">
-<h4 id="request_decryption_key" class="doc_header"><code>request_decryption_key</code><a href="https://github.com/josiahls/play_it_later/tree/master/play_it_later/talker.py#L106" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>request_decryption_key</code>(<strong><code>key</code></strong>, <strong><code>max_tries</code></strong>=<em><code>10</code></em>)</p>
+<h4 id="request_decryption_key" class="doc_header"><code>request_decryption_key</code><a href="https://github.com/josiahls/play_it_later/tree/master/play_it_later/talker.py#L107" class="source_link" style="float:right">[source]</a></h4><blockquote><p><code>request_decryption_key</code>(<strong><code>key</code></strong>, <strong><code>max_tries</code></strong>=<em><code>10</code></em>)</p>
 </blockquote>
 
 </div>
@@ -409,7 +409,7 @@ Please pick from these days in month 12: (11, 12, 13, 14, 15, 16, 17, 18, 19, 20
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">decrypted_text</span><span class="o">=</span><span class="n">request_decryption_key</span><span class="p">(</span><span class="n">previous_date_key</span><span class="p">);</span><span class="n">decrypted_text</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">decrypted_text</span><span class="p">,</span><span class="n">result_description</span><span class="o">=</span><span class="n">request_decryption_key</span><span class="p">(</span><span class="n">previous_date_key</span><span class="p">);</span><span class="n">decrypted_text</span>
 </pre></div>
 
     </div>
@@ -440,22 +440,12 @@ The message was encrypted to be inaccessible until 12/11/2020, 7:30:00 PM local 
 
 <div class="output_area">
 
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">HttpConnectionFailure</span>                     Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-51-e6c07df34943&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>decrypted_text<span class="ansi-blue-fg">=</span>request_decryption_key<span class="ansi-blue-fg">(</span>previous_date_key<span class="ansi-blue-fg">)</span><span class="ansi-blue-fg">;</span>decrypted_text
 
-<span class="ansi-green-fg">&lt;ipython-input-49-2838ae79016a&gt;</span> in <span class="ansi-cyan-fg">request_decryption_key</span><span class="ansi-blue-fg">(key, max_tries)</span>
-<span class="ansi-green-intense-fg ansi-bold">     26</span>             <span class="ansi-green-fg">if</span> decrypted_msg<span class="ansi-blue-fg">==</span><span class="ansi-blue-fg">&#39;&#39;</span><span class="ansi-blue-fg">:</span>sleep<span class="ansi-blue-fg">(</span><span class="ansi-cyan-fg">1</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     27</span>             <span class="ansi-green-fg">else</span><span class="ansi-blue-fg">:</span><span class="ansi-green-fg">break</span>
-<span class="ansi-green-fg">---&gt; 28</span><span class="ansi-red-fg">             </span><span class="ansi-green-fg">if</span> i<span class="ansi-blue-fg">==</span>max_tries<span class="ansi-blue-fg">:</span> <span class="ansi-green-fg">raise</span> HttpConnectionFailure<span class="ansi-blue-fg">(</span><span class="ansi-blue-fg">&#39;Failed to get decrypted_msg&#39;</span><span class="ansi-blue-fg">)</span>
-<span class="ansi-green-intense-fg ansi-bold">     29</span>         <span class="ansi-green-fg">return</span> decrypted_msg
-<span class="ansi-green-intense-fg ansi-bold">     30</span> 
 
-<span class="ansi-red-fg">HttpConnectionFailure</span>: Failed to get decrypted_msg</pre>
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;202012090430-4ID_02OeiqruSuDOrKn2GvNsySCGPh5PnWHlur9wuxSvsovbbiUqvctKx3nb-s6eGhF1exvfaxxLj7lOc9qR2qC8pQIXZz66KYjNc4tDDNF75pcnw2mpM294fJdJjr2mB2TBQI4M6WOSF_WqKEUORmjwWABGiq0gOYb2FAdYQ_Hxy7GvN0QLswzZxu-JfjBECHfCo_8evHyDMaSdS-1KhnLs7weLw===lYiH&#39;</pre>
 </div>
+
 </div>
 
 </div>
@@ -475,25 +465,6 @@ The message was encrypted to be inaccessible until 12/11/2020, 7:30:00 PM local 
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-<div class="output_area">
-
-<div class="output_subarea output_text output_error">
-<pre>
-<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
-<span class="ansi-green-fg">&lt;ipython-input-52-4a1918896530&gt;</span> in <span class="ansi-cyan-fg">&lt;module&gt;</span>
-<span class="ansi-green-fg">----&gt; 1</span><span class="ansi-red-fg"> </span>test_eq<span class="ansi-blue-fg">(</span>decrypted_text<span class="ansi-blue-fg">,</span>encrypted_text<span class="ansi-blue-fg">)</span>
-
-<span class="ansi-red-fg">NameError</span>: name &#39;decrypted_text&#39; is not defined</pre>
-</div>
-</div>
-
 </div>
 </div>
 

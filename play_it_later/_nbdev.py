@@ -10,10 +10,13 @@ index = {"process_dirs": "00_encryption.ipynb",
          "encrypted_file2txt": "01_talker.ipynb",
          "HttpConnectionFailure": "01_talker.ipynb",
          "send_encryption_key": "01_talker.ipynb",
-         "request_decryption_key": "01_talker.ipynb"}
+         "request_decryption_key": "01_talker.ipynb",
+         "encrypt_game": "02_cli.ipynb",
+         "decrypt_game": "02_cli.ipynb"}
 
 modules = ["encryption.py",
-           "talker.py"]
+           "talker.py",
+           "cli.py"]
 
 doc_url = "https://josiahls.github.io/play_it_later/"
 

@@ -18,7 +18,7 @@ from selenium.webdriver.common.by import By
 
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.chrome.options import Options
-
+import shutil
 from selenium.webdriver.common.keys import Keys
 from itertools import count
 from time import sleep
@@ -43,13 +43,14 @@ def encrypted_file2txt(p:Path):
     if len(Path(p).parts)==0 or Path(p).parts[-1]!='encrypted_time_key.pkl':
         p=Path(p)/'encrypted_time_key.pkl'
     with open(p,'rb') as f:
+        shutil.move(str(p),'.')
         return pickle.load(f)
 
 # Cell
 class HttpConnectionFailure(Exception):pass
 
 def send_encryption_key(key,year=2020,month=12,day=10,hour=19,minute=30,max_tries=10):
-    chrome_options = Options()
+    chrome_options=Options()
     chrome_options.add_argument('--headless')
     chrome_options.add_argument('--no-sandbox')
     chrome_options.add_argument('--disable-dev-shm-usage')
@@ -58,7 +59,7 @@ def send_encryption_key(key,year=2020,month=12,day=10,hour=19,minute=30,max_trie
         driver.get("http://www.tellyoulater.com")
 
         textbox=driver.find_element_by_id('intext')
-        textbox.send_keys(key)
+        textbox.send_keys(key.decode('utf-8') if type(key)==bytes else key)
 
         button=driver.find_element_by_id('timeAM' if hour<12 else 'timePM')
         button.click()
@@ -130,4 +131,4 @@ def request_decryption_key(key,max_tries=10):
             if decrypted_msg=='':sleep(1)
             else:break
             if i==max_tries: raise HttpConnectionFailure('Failed to get decrypted_msg')
-        return decrypted_msg
+        return decrypted_msg,result_description
