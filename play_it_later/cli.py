@@ -61,5 +61,4 @@ def decrypt_game(p:Param('The path to the game save.',Path),
         return
     process_dirs(en_p,partial(decrypt_file,key=key,verbose=verbose,prefix=prefix))
 
-    if mv_original_dir:
-        shutil.move(str(en_p.parents[2]/prefix/en_p if len(en_p.parts)>2 else prefix/en_p),p)
+    if mv_original_dir: shutil.move(str(prefix/en_p),p)
