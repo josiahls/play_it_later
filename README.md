@@ -1,6 +1,8 @@
 # play_it_later
 > A program for saving games for later dates for those with little self control.
 
+Doc site can be found here: https://josiahls.github.io/play_it_later/
+
 
 ## Install
 
