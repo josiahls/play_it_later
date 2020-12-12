@@ -142,3 +142,4 @@ checklink/cookies.txt
 /nbs/encrypted/
 /nbs/minecraft_encrypted/
 /nbs/decrypted/
+/nbs/encrypted_time_key.pkl
